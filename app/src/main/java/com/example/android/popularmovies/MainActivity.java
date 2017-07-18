@@ -31,7 +31,8 @@ public class MainActivity extends AppCompatActivity implements MovieDataAdapter.
     private static final String MENU_MOST_POPULAR ="Most Popular" ;
     private static final String MENU_FAVOURITE = "Favourites";
     private static String MENU_SELECTED;
-
+    private static final int NUM_ROWS_VERTICAL = 2;
+    private static final int NUM_ROWS_HORIZONTAL = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,10 +42,10 @@ public class MainActivity extends AppCompatActivity implements MovieDataAdapter.
         findInitialViews();
         //getConfigMethod taken from https://stackoverflow.com/questions/3663665/how-can-i-get-the-current-screen-orientation
         if(this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT){
-            mMovieGrid.setLayoutManager(new GridLayoutManager(getApplicationContext(),2));
+            mMovieGrid.setLayoutManager(new GridLayoutManager(getApplicationContext(),NUM_ROWS_VERTICAL));
         }
         else{
-            mMovieGrid.setLayoutManager(new GridLayoutManager(getApplicationContext(),3));
+            mMovieGrid.setLayoutManager(new GridLayoutManager(getApplicationContext(),NUM_ROWS_HORIZONTAL));
         }
         mMovieGrid.setHasFixedSize(true);
         getSupportLoaderManager().initLoader(MOVIE_LOADER_ID,null,this);
@@ -98,7 +99,7 @@ public class MainActivity extends AppCompatActivity implements MovieDataAdapter.
 
         if (itemID == R.id.menuPopular){
             MENU_SELECTED = MENU_MOST_POPULAR;
-            loadMovieData(getString(R.string.menu_popular)); //TODO AWESOME You're using String resources!
+            loadMovieData(getString(R.string.menu_popular));
             return true;
         }else if (itemID == R.id.menuTopRated){
             MENU_SELECTED = MENU_TOP_RATED;
@@ -165,7 +166,7 @@ public class MainActivity extends AppCompatActivity implements MovieDataAdapter.
     public void onLoadFinished(android.support.v4.content.Loader<Movie[]> loader, Movie[] movies) {
         mProgBar.setVisibility(View.INVISIBLE);
         boolean isFave = false;
-        // TODO is FAve --- movies will not be null
+
         if (movies == null){
             showErrorViewHideRv(getString(R.string.tv_error_str));
         }else if(movies.length == 0){

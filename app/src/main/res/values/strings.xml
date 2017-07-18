@@ -14,7 +14,7 @@
     <string name="json_original_title" translatable="false">original_title</string>
     <string name="json_vote_average" translatable="false">vote_average</string>
     <string name="movie_img_base_path" translatable="false">http://image.tmdb.org/t/p/</string>
-    <string name="empty_string"></string>
+    <string name="empty_string" translatable="false"></string>
 
     <string name="selected_menu_item_key" translatable="false">MenuItemKey</string>
 
@@ -71,7 +71,7 @@
     <!--Reviews stuff-->
     <string name="reviews_key" translatable="false">reviews</string>
     <string name="reviews_header">Reviews:</string>
-    <string name="content_key">content</string>
+    <string name="content_key" translatable="false">content</string>
     <string name="review_error">Apologies there has been an error loading the reviews. Check network connection.</string>
     <string name="no_reviews_error">There are no reviews available</string>
 </resources>

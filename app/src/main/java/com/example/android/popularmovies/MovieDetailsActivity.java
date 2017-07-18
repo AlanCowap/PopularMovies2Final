@@ -198,7 +198,7 @@ public class MovieDetailsActivity extends AppCompatActivity implements TrailerDa
     }
 
     private void saveImageLocally(){
-
+        final int BITMAP_QUALITY = 90;
         Picasso.with(this).load(m.getPosterPath()).into(new Target() {
             @Override
             public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
@@ -214,7 +214,7 @@ public class MovieDetailsActivity extends AppCompatActivity implements TrailerDa
                     myDir = new File(myDir,name);
                     String imgPath = myDir.getPath();
                     FileOutputStream out = new FileOutputStream(myDir);
-                    bitmap.compress(Bitmap.CompressFormat.JPEG,90,out);
+                    bitmap.compress(Bitmap.CompressFormat.JPEG,BITMAP_QUALITY,out);
                     out.flush();
                     out.close();
                     m.setPosterPathLocal(imgPath);

@@ -103,41 +103,29 @@ public class Movie implements Parcelable {
         return origTitle;
     }
 
-    public void setOrigTitle(String origTitle) {
-        this.origTitle = origTitle;
-    }
 
     public String getSynoposis() {
         return synoposis;
     }
 
-    public void setSynoposis(String synoposis) {
-        this.synoposis = synoposis;
-    }
 
     public double getUserRating() {
         return userRating;
     }
 
-    public void setUserRating(double userRating) {
-        this.userRating = userRating;
-    }
+
 
     public String getReleaseDate() {
         return releaseDate;
     }
 
-    public void setReleaseDate(String releaseDate) {
-        this.releaseDate = releaseDate;
-    }
+
 
     public String getPosterPath() {
         return posterPath;
     }
 
-    public void setPosterPath(String posterPath) {
-        this.posterPath = posterPath;
-    }
+
 
     public void setPosterPathLocal(String posterPathLocal) {
         this.posterPathLocal = posterPathLocal;
