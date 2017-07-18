@@ -40,7 +40,7 @@ public class NetworkUtilities {
         //Build URL method snippets taken from Udacity Android Dev chaapter 2
         api_key_val = c.getString(R.string.mov_api_key);
 
-        String movie_base_url = "";
+        String movie_base_url = c.getString(R.string.empty_string);
         if (sortByMovies.equals(c.getString(R.string.menu_popular)) ){
             movie_base_url = MOVIE_DB_URL_POPULAR;
         }else if (sortByMovies.equals(c.getString(R.string.menu_top_rated))){
