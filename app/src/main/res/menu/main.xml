@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <!--Spinner refrenced from http://stackoverflow.com/questions/37250397/how-to-add-a-spinner-next-to-a-menu-in-the-toolbar-->
+    <!--<item-->
+        <!--android:title="@string/spnr_title"-->
+        <!--android:id="@+id/movieSpinner"-->
+        <!--android:actionViewClass="android.widget.Spinner"-->
+        <!--app:showAsAction="always"-->
+        <!--/>-->
+
+    <item
+        android:title="@string/menu_popular"
+        android:id="@+id/menuPopular"
+        android:orderInCategory="1"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:title="@string/menu_top_rated"
+        android:id="@+id/menuTopRated"
+        android:orderInCategory="2"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:title="@string/menu_favourite"
+        android:id="@+id/menuFavourite"
+        android:orderInCategory="3"
+        app:showAsAction="never"
+        />
+
+</menu>

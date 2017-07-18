@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">PopularMovies</string>
+    <string name="tv_error_str">Apologies, an error has occurred when getting movie data. Check network connection.</string>
+    <string name="menu_popular">Most Popular</string>
+    <string name="menu_top_rated">Top Rated</string>
+    <string name="url_base_moviedb_popular" translatable="false">http://api.themoviedb.org/3/movie/popular</string>
+    <string name="url_base_moviedb_top_rated" translatable="false">http://api.themoviedb.org/3/movie/top_rated</string>
+    <string name="url_apikey_param" translatable="false">api_key</string>
+    <string name="movie_json_results" translatable="false">results</string>
+    <string name="json_poster_path" translatable="false">poster_path</string>
+    <string name="json_synoposis" translatable="false">overview</string>
+    <string name="json_release_date" translatable="false">release_date</string>
+    <string name="json_id" translatable="false">id</string>
+    <string name="json_original_title" translatable="false">original_title</string>
+    <string name="json_vote_average" translatable="false">vote_average</string>
+    <string name="movie_img_base_path" translatable="false">http://image.tmdb.org/t/p/</string>
+    <string name="empty_string"></string>
+
+    <string name="selected_menu_item_key" translatable="false">MenuItemKey</string>
+
+
+
+
+<!-- Movie details xml-->
+    <string name="movie_img_size" translatable="false">w500/</string>
+    <string name="movie_img_size_185" translatable="false">w185/</string>
+    <string name="movie_img_size_horiz" translatable="false">w500</string>
+    <string name="mov_synop_lbl">Plot Synopsis:</string>
+    <string name="mov_user_rating_lbl">User Rating:</string>
+    <string name="mov_reldate_lbl">Release Date:</string>
+    <string name="mov_details">Movie Details</string>
+    <string name="trailers_header">Trailers:</string>
+
+    <!--Key Val pair-->
+    <string name="mov_key" translatable="false">movie</string>
+    <!--API-->
+    <string name="mov_api_key" translatable="false"></string>
+
+
+    <!--Logging-->
+    <string name="log_bind" translatable="false">Bind: </string>
+    <string name="hashtag" translatable="false">#</string>
+    <string name="view_holder_created" translatable="false">View Holder Created: </string>
+    <string name="log_load_mov_data" translatable="false">Load Movie Data: </string>
+    <string name="mov_arr_count" translatable="false">Movie Array Count</string>
+    <string name="mov_poster_strs" translatable="false">Movie Poster Strings:</string>
+    <string name="str_sort_by_movs" translatable="false">Sort By Movies:</string>
+    <string name="get_json_response" translatable="false">JSON Response:</string>
+    <string name="do_in_bground" translatable="false">Do in background: </string>
+    <string name="json_response" translatable="false">Jsonresponse: </string>
+    <string name="on_post_execute" translatable="false">onPostExecute: </string>
+    <string name="adapter_set" translatable="false">onPostExecute: Adapter Set: </string>
+
+    <!--Favourite stuff-->
+    <string name="checkbox_fav">Favourite:</string>
+    <string name="menu_favourite">Favourites</string>
+    <string name="no_favs_error">You have no favourites!</string>
+    <string name="failed_loading_error">Failed loading favourites</string>
+    <string name="fave_imgs_folder" translatable="false">/faveImgs</string>
+    <string name="jpg_ext" translatable="false">.jpg</string>
+
+    <!--Recycler view Trailers-->
+    <string name="trailer_grid_num">Trailer </string>
+    <string name="trailer_error">Apologies there has been an error loading the trailers. Check network connection.</string>
+    <string name="no_trailers_error">There are no trailers available</string>
+    <string name="videos_key" translatable="false">videos</string>
+    <string name="key_key" translatable="false">key</string>
+    <string name="youtube_app_intent" translatable="false">vnd.youtube:</string>
+    <string name="youtube_web_intent" translatable="false">http://wwww.youtube.com/watch?v=</string>
+
+    <!--Reviews stuff-->
+    <string name="reviews_key" translatable="false">reviews</string>
+    <string name="reviews_header">Reviews:</string>
+    <string name="content_key">content</string>
+    <string name="review_error">Apologies there has been an error loading the reviews. Check network connection.</string>
+    <string name="no_reviews_error">There are no reviews available</string>
+</resources>

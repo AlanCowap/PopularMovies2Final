@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:orientation="vertical"
+    tools:context="com.example.android.popularmovies.MovieDetailsActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="22">
+
+
+            <TextView
+                android:id="@+id/movie_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:padding="@dimen/padding_standard"
+                android:layout_weight="2"
+                android:textColor="@android:color/background_light"
+
+                android:textSize="@dimen/text_size_large_header" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="6">
+
+                <ImageView
+                    android:id="@+id/img_view_poster"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/user_rating_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimaryDark"
+                        android:text="@string/mov_user_rating_lbl"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="@dimen/text_size_header"
+                        android:gravity="center"
+                        android:textStyle="bold|italic" />
+
+                    <TextView
+                        android:id="@+id/tv_user_rating"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_normal" />
+
+
+                    <TextView
+                        android:id="@+id/rel_date_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimaryDark"
+                        android:text="@string/mov_reldate_lbl"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="@dimen/text_size_header"
+                        android:gravity="center"
+                        android:textStyle="bold|italic" />
+
+                    <TextView
+                        android:id="@+id/tv_rel_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_normal" />
+
+                    <TextView
+                        android:id="@+id/favourite_chkbox_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimaryDark"
+                        android:text="@string/checkbox_fav"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="@dimen/text_size_header"
+                        android:gravity="center"
+                        android:textStyle="bold|italic" />
+
+
+                    <CheckBox
+                        android:id="@+id/chkbox_fav"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        app:buttonTint="@android:color/background_dark"
+                        android:onClick="chkbox_fave_Clicked"
+                        />
+                    </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/synop_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:text="@string/mov_synop_lbl"
+                android:gravity="center"
+                android:textColor="@android:color/background_light"
+                android:textSize="@dimen/text_size_header"
+                android:layout_weight="2"
+                android:textStyle="bold|italic" />
+            />
+
+            <TextView
+
+                android:id="@+id/tv_plot_synop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:layout_weight="4"
+                android:layout_margin="@dimen/margin_standard"
+                android:textSize="@dimen/text_size_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:text="@string/trailers_header"
+                android:gravity="center"
+                android:textColor="@android:color/background_light"
+                android:textSize="@dimen/text_size_header"
+                android:textStyle="bold|italic"
+                android:layout_weight="2"/>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_trailers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rv_trailer_error"
+                android:gravity="center"
+
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_normal"
+                android:textStyle="italic"
+                android:visibility="invisible"
+                />
+
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:text="@string/reviews_header"
+                android:gravity="center"
+                android:textColor="@android:color/background_light"
+                android:textSize="@dimen/text_size_header"
+                android:textStyle="bold|italic"
+                android:layout_weight="2"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rv_reviews"
+                android:layout_weight="4"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rv_review_error"
+                android:gravity="center"
+
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_normal"
+                android:textStyle="italic"
+                android:visibility="invisible"
+                />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</FrameLayout>
