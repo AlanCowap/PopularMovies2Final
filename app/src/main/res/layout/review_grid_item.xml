@@ -33,6 +33,8 @@
             android:padding="@dimen/expand_img_padding"
             android:layout_gravity="end|bottom"
             android:background="@android:color/transparent"/>
+        <!-- TODO REQUIREMENT Accessibility: All (non-text based) ImageViews and ImageButtons should contain a contentDescription -->
+
     </com.ms.square.android.expandabletextview.ExpandableTextView>
 
 

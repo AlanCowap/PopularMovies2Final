@@ -47,6 +47,11 @@ public class MainActivity extends AppCompatActivity implements MovieDataAdapter.
         else{
             mMovieGrid.setLayoutManager(new GridLayoutManager(getApplicationContext(),NUM_ROWS_HORIZONTAL));
         }
+        //TODO SUGGESTION It's a coding style preference so your choice, you could rewrite your code above as:
+        //TODO SUGGESTION  int numColumns = (this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT)
+        //TODO SUGGESTION       ? NUM_COLUMNS_PORTRAIT : NUM_COLUMNS_LANDSCAPE;
+        //TODO SUGGESTION  mMovieGrid.setLayoutManager(new GridLayoutManager(getApplicationContext(), numColumns));
+
         mMovieGrid.setHasFixedSize(true);
         getSupportLoaderManager().initLoader(MOVIE_LOADER_ID,null,this);
         String menuState = getString(R.string.empty_string);

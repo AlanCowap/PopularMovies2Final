@@ -44,6 +44,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:adjustViewBounds="true" />
+                <!-- TODO REQUIREMENT Accessibility: All (non-text based) ImageViews and ImageButtons should contain a contentDescription -->
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -114,6 +115,7 @@
                         app:buttonTint="@android:color/background_dark"
                         android:onClick="chkbox_fave_Clicked"
                         />
+                    <!--TODO SUGGESTION The app: prefix for this CheckBox buttonTint should be android: -->
                     </LinearLayout>
 
 
@@ -133,6 +135,7 @@
                 android:layout_weight="2"
                 android:textStyle="bold|italic" />
             />
+            <!-- TODO SUGGESTION Remove the extraneous closing slash and angled-bracket above -->
 
             <TextView
 
