@@ -12,6 +12,7 @@ import java.net.URL;
 /**
  * Created by User on 27-Jun-17.
  */
+//TODO SUGGESTION This is one of at least three classes that "User" has Created, be mindful this give the impression the work is not yours.
 
 public class TrailerLoader extends AsyncTaskLoader<String[]> {
     public static final int MOVIE_LOADER_ID = 22;

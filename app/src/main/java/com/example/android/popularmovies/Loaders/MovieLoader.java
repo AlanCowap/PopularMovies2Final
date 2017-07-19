@@ -18,6 +18,7 @@ import java.net.URL;
  */
 
 public class MovieLoader extends AsyncTaskLoader<Movie[]> {
+    //TODO AWESOME  This modular design helps code reuse and keeps your project cleaner and easier to maintain
     public static final int MOVIE_LOADER_ID = 20;
     private static final String TAG = MovieLoader.class.getSimpleName();
     private Context c;
@@ -46,6 +47,7 @@ public class MovieLoader extends AsyncTaskLoader<Movie[]> {
     }
 
     private Movie[] populateFavourites(){
+        //TODO AWESOME Leveraging your Content Provider is the way to go.
         Cursor movCurosr = null;
         try{
             movCurosr = c.getContentResolver().query(FavouriteContract.FavouriteEntry.CONTENT_URI,
@@ -65,6 +67,7 @@ public class MovieLoader extends AsyncTaskLoader<Movie[]> {
 
         Movie[] movs = new Movie[movCurosr.getCount()];
 //        getMoviesFromCurosr(movCurosr);
+        //TODO SUGGESTION Be mindful that some reviewers may not approve of commented-out code.
         int i = 0;
         try{
             while(movCurosr.moveToNext()){

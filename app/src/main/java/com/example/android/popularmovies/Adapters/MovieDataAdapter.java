@@ -83,6 +83,7 @@ public class MovieDataAdapter extends RecyclerView.Adapter<MovieDataAdapter.Movi
         }
         void bind(Movie m){
             if (isFave == false){
+                //TODO SUGGESTION Styling, you could rewrite the above as if(!isFave)
                 Picasso.with(context).load(m.getPosterPath()).into(imgView);
             }else{
                 File f = new File(m.getPosterPathLocal());

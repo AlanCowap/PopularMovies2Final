@@ -8,6 +8,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/img_movie_grid"
         android:adjustViewBounds="true"/>
+    <!-- TODO REQUIREMENT Accessibility: All (non-text based) ImageViews and ImageButtons should contain a contentDescription -->
 
 
 </FrameLayout>

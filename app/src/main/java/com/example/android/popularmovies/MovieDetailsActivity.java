@@ -145,6 +145,7 @@ public class MovieDetailsActivity extends AppCompatActivity implements TrailerDa
         String strId = Integer.toString(id);
         Uri uri = FavouriteContract.FavouriteEntry.CONTENT_URI;
         uri = uri.buildUpon().appendPath(strId).build();
+        //TODO SUGGESTION You can leverage try-with-resources to do Automatic Resource Management here:
         Cursor c = null;
         try{
             c = getContentResolver().query(uri, null, null,null,null);
