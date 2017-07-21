@@ -139,6 +139,7 @@ public class MovieDetailsActivity extends AppCompatActivity implements TrailerDa
         }else{
             Picasso.with(this).load(m.getPosterPath()).into(mImgViewPoster);
         }
+        mImgViewPoster.setContentDescription(m.getOrigTitle());
     }
 
     private boolean checkIsMovieFave(int id){
@@ -146,9 +147,8 @@ public class MovieDetailsActivity extends AppCompatActivity implements TrailerDa
         Uri uri = FavouriteContract.FavouriteEntry.CONTENT_URI;
         uri = uri.buildUpon().appendPath(strId).build();
         //TODO SUGGESTION You can leverage try-with-resources to do Automatic Resource Management here:
-        Cursor c = null;
-        try{
-            c = getContentResolver().query(uri, null, null,null,null);
+
+        try(Cursor c = getContentResolver().query(uri, null, null,null,null)){
             if (c.getCount() > 0){  //If movie is fave and local img path is not already set - it must be set
                 setLocalPathFromCurosr(c);
                 return true;
@@ -157,9 +157,9 @@ public class MovieDetailsActivity extends AppCompatActivity implements TrailerDa
             }
         }catch(Exception e){
             Log.e(TAG, getString(R.string.failed_loading_error) + e.getMessage());
-        }finally {
-            c.close();
         }
+
+
         return false;
     }
 
@@ -248,7 +248,6 @@ public class MovieDetailsActivity extends AppCompatActivity implements TrailerDa
     }
     @Override
     public void onListItemClick(int clickedItemIndex, String trailerKey) {
-           //Youtube intent
         watchYoutubeVideo(trailerKey);
     }
 

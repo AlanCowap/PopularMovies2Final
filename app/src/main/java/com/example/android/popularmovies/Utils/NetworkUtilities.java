@@ -15,7 +15,7 @@ import java.net.URL;
 import java.util.Scanner;
 
 /**
- * Created by User on 16-May-17.
+ * Created by alex.fanning on 16-May-17.
  */
 
 public class NetworkUtilities {
