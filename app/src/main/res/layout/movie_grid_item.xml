@@ -7,7 +7,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/img_movie_grid"
-        android:adjustViewBounds="true"/>
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/mov_grid_content_descrip"
+        />
     <!-- TODO REQUIREMENT Accessibility: All (non-text based) ImageViews and ImageButtons should contain a contentDescription -->
 
 

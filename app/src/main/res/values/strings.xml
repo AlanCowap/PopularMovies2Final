@@ -30,6 +30,8 @@
     <string name="mov_reldate_lbl">Release Date:</string>
     <string name="mov_details">Movie Details</string>
     <string name="trailers_header">Trailers:</string>
+    <string name="img_content_descrip">Image of selected movie</string>
+    <string name="mov_grid_content_descrip">Movie poster</string>
 
     <!--Key Val pair-->
     <string name="mov_key" translatable="false">movie</string>
@@ -74,4 +76,5 @@
     <string name="content_key" translatable="false">content</string>
     <string name="review_error">Apologies there has been an error loading the reviews. Check network connection.</string>
     <string name="no_reviews_error">There are no reviews available</string>
+    <string name="drop_down_content_descrip">Drop down button for review</string>
 </resources>

@@ -66,7 +66,6 @@ public class MovieLoader extends AsyncTaskLoader<Movie[]> {
 
 
         Movie[] movs = new Movie[movCurosr.getCount()];
-//        getMoviesFromCurosr(movCurosr);
         //TODO SUGGESTION Be mindful that some reviewers may not approve of commented-out code.
         int i = 0;
         try{

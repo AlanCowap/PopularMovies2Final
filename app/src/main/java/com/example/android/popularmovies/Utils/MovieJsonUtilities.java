@@ -11,7 +11,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
- * Created by User on 16-May-17.
+ * Created by alex.fanning on 16-May-17.
  */
 
 public final class MovieJsonUtilities {
@@ -52,7 +52,6 @@ public final class MovieJsonUtilities {
             Double movVote = movie.getDouble(MOV_VOTE);
 
             Movie m = new Movie(id,title,synoposis,movVote,relDate,fullPathUrl);
-           // Log.d(TAG, context.getString(R.string.mov_poster_strs) + fullPathUrl);
             movies[i] = m;
         }
 

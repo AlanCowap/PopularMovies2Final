@@ -10,7 +10,7 @@ import com.example.android.popularmovies.Utils.NetworkUtilities;
 import java.net.URL;
 
 /**
- * Created by User on 27-Jun-17.
+ * Created by alex.fanning on 27-Jun-17.
  */
 //TODO SUGGESTION This is one of at least three classes that "User" has Created, be mindful this give the impression the work is not yours.
 

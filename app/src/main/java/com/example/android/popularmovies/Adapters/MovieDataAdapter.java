@@ -23,6 +23,7 @@ public class MovieDataAdapter extends RecyclerView.Adapter<MovieDataAdapter.Movi
     private Movie[] movies;
 
     private int mNumberItems;
+
     private static int viewHolderCount;
     private Context context;
     private static boolean isFave = false;
@@ -71,7 +72,6 @@ public class MovieDataAdapter extends RecyclerView.Adapter<MovieDataAdapter.Movi
         return movies.length;
     }
 
-    //    TODOne Set Onclick lsitener - Implement onclick listener
     class MovieViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         ImageView imgView;
 
@@ -82,7 +82,7 @@ public class MovieDataAdapter extends RecyclerView.Adapter<MovieDataAdapter.Movi
             itemView.setOnClickListener(this);
         }
         void bind(Movie m){
-            if (isFave == false){
+            if (!isFave){
                 //TODO SUGGESTION Styling, you could rewrite the above as if(!isFave)
                 Picasso.with(context).load(m.getPosterPath()).into(imgView);
             }else{

@@ -37,16 +37,14 @@ public class MainActivity extends AppCompatActivity implements MovieDataAdapter.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //NetworkUtilities.buildUrlVideoOrReview("reviews","297762");
+
         setContentView(R.layout.activity_main);
         findInitialViews();
         //getConfigMethod taken from https://stackoverflow.com/questions/3663665/how-can-i-get-the-current-screen-orientation
-        if(this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT){
-            mMovieGrid.setLayoutManager(new GridLayoutManager(getApplicationContext(),NUM_ROWS_VERTICAL));
-        }
-        else{
-            mMovieGrid.setLayoutManager(new GridLayoutManager(getApplicationContext(),NUM_ROWS_HORIZONTAL));
-        }
+
+       int numColumns = (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) ? NUM_ROWS_VERTICAL : NUM_ROWS_HORIZONTAL;
+        mMovieGrid.setLayoutManager(new GridLayoutManager(getApplicationContext(), numColumns));
+
         //TODO SUGGESTION It's a coding style preference so your choice, you could rewrite your code above as:
         //TODO SUGGESTION  int numColumns = (this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT)
         //TODO SUGGESTION       ? NUM_COLUMNS_PORTRAIT : NUM_COLUMNS_LANDSCAPE;
@@ -127,7 +125,6 @@ public class MainActivity extends AppCompatActivity implements MovieDataAdapter.
     }
 
     private void loadMovieData(String selectedMenuItem){
-//        new RetrieveMovieDataTask(this).execute(selectedMenuItem);
         LoaderManager lm = getSupportLoaderManager();
         android.support.v4.content.Loader<Movie[]> movieLoader = lm.getLoader(MOVIE_LOADER_ID);
         if (movieLoader == null){
@@ -157,7 +154,6 @@ public class MainActivity extends AppCompatActivity implements MovieDataAdapter.
         startActivity(movieDetailsActivityIntent);
     }
 
-    //onListItemClick method taken from Udacity Creating Android Apps chapter 3
 
 
     @Override
