@@ -20,7 +20,7 @@ import com.example.android.popularmovies.Loaders.MovieLoader;
 import static com.example.android.popularmovies.Loaders.MovieLoader.MOVIE_LOADER_ID;
 
 public class MainActivity extends AppCompatActivity implements MovieDataAdapter.ListItemClickListener, LoaderManager.LoaderCallbacks<Movie[]>{
-
+//TODO-2 Good job implementing the required changes, congratulations on Passing Phase 2.
 
     private TextView mTextViewError;
     private ProgressBar mProgBar;
